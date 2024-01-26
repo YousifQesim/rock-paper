@@ -2,4 +2,36 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+.line1 {
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  background-color: black;
+  top: 25%;
+  left: 30%;
 
+  z-index: 0;
+}
+.line2 {
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  background-color: black;
+  top: 55%;
+  left: 35%;
+
+  transform: rotate(-55deg);
+
+  z-index: 0;
+}
+.line3 {
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  background-color: rgb(211, 11, 11);
+  top: 55%;
+  left: 15%;
+
+  transform: rotate(55deg);
+  z-index: 0;
+}

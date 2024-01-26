@@ -1,19 +1,50 @@
-
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import './App.css'
-
+import rock from "./assets/images/icon-rock.svg";
+import paper from "./assets/images/icon-paper.svg";
+import scissors from "./assets/images/icon-scissors.svg";
 function App() {
-
-
   return (
-    <>
-    <div>
-      hello world
-    </div>
+    <div className="bg-blue-900 h-screen ">
+      <div className="flex flex-col  items-center border-red-500 border-solid border-2 h-screen w-full">
+        <div className="border-white border-solid border-2 w-2/4 flex justify-around items-center mx-auto my-20">
+          <div>
+            <h1>Rock</h1>
+            <h1>Paper</h1>
+            <h1>Scissors</h1>
+          </div>
+          <div>
+            <h1>score</h1>
+            <h1>number</h1>
+          </div>
+        </div>
+        <div className="border-red-500 border-solid border-2 w-2/4 h-1/4 flex justify-center gap-24 relative">
+        <div className="line1"></div>
   
-    </>
-  )
+  <div className="bg-white rounded-full h-20 w-20 flex justify-center items-center outline outline-8 outline-indigo-600 z-50" >
+    <div className="flex items-center">
+      <img src={paper} alt="" />
+    </div>
+  </div>
+  <div className="line2"></div>
+  <div className="bg-white rounded-full h-20 w-20 flex justify-center items-center outline outline-8 outline-yellow-500 z-50">
+    <div className="flex items-center">
+      <img src={scissors} alt="" />
+    </div>
+  </div>
+  <div className="line3"></div>
+  <div className="bg-white absolute -bottom-5 rounded-full h-20 w-20 flex justify-center items-center outline outline-8 outline-red-600 z-50">
+    <div className="flex items-center ">
+      <img src={rock} alt="" />
+    </div>
+  </div>
+</div>
+
+
+
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
