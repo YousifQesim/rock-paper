@@ -1,6 +1,6 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import rock from "../assets/images/icon-Rock.svg";
+import rock from "../assets/images/icon-rock.svg"
 
 import { useDispatch } from "react-redux";
 
