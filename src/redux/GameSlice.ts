@@ -44,7 +44,19 @@ const gameSlice = createSlice({
       state.computerChoice = computerChoice;
       state.playerChoice = action.payload;
 
+      const winner =
+        state.playerChoice === state.computerChoice
+          ? 'draw'
+          : (state.playerChoice === 'rock' && state.computerChoice === 'scissors') ||
+            (state.playerChoice === 'paper' && state.computerChoice === 'rock') ||
+            (state.playerChoice === 'scissors' && state.computerChoice === 'paper')
+          ? 'player'
+          : 'computer';
+
+      state.score += winner === 'player' ? 1 : winner === 'computer' ? -1 : 0;
+      state.resultPage = true;
     },
+  
   },
 });
 

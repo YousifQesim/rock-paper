@@ -5,41 +5,31 @@ import Paper from "./Paper";
 import Rock from "./Rock";
 import Scissors from "./Scissors";
 
-import { useDispatch, useSelector } from "react-redux";
+import {useSelector } from "react-redux";
 import { RootState } from "../redux/Store";
 import UserScore from "./UserScore";
 import {
-  setScore,
-  setResultPage,
-  resetGame,
+
   determineWinner,
-  handleChoice,
+
 } from "../redux/GameSlice";
 
-import ChallengePage from "./ChallengePage";
+
 
 function UserPage() {
-  const dispatch = useDispatch();
-  const { resultPage, score, playerChoice, computerChoice } = useSelector(
+
+  const {  score, playerChoice, computerChoice } = useSelector(
     (state: RootState) => state.game
   );
 
   const winner = useSelector(determineWinner);
-  const handleChoiceClick = (choice: string) => {
-    dispatch(handleChoice(choice));
-    dispatch(setResultPage(true));
-    if (winner === "player") {
-      dispatch(setScore(score + 1));
-    } else if (winner === "computer") {
-      dispatch(setScore(score - 1));
-    }
-  };
+console.log(score)
 
   return (
     <div className="h-screen ">
-      {resultPage ? (
+      {/* {resultPage ? (
         <ChallengePage />
-      ) : (
+      ) : ( */}
         <div className="flex flex-col  items-center  h-screen w-full">
           <UserScore />
           <div className="w-2/4 h-1/4 flex justify-center gap-24 relative">
@@ -60,10 +50,11 @@ function UserPage() {
             </div>
           </div>
         </div>
-      )}
+      
+      {/* } */}
+      <h1>{score}</h1>
       <h1>{playerChoice}</h1>
       <h1>{computerChoice}</h1>
-      <h1>{score}</h1>
       <h1>{winner}</h1>
     </div>
   );
