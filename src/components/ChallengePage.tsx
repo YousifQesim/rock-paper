@@ -7,6 +7,8 @@ import { useSelector, useDispatch } from "react-redux";
 import Paper from "./Paper";
 import Rock from "./Rock";
 import Scissors from "./Scissors";
+import Lizard from "./Lizard";
+import Spock from "./Spock";
 import { determineWinner, resetGame, setResultPage } from "../redux/GameSlice";
 
 const ChallengePage = () => {
@@ -24,25 +26,34 @@ const ChallengePage = () => {
     switch (playerChoice) {
       case "rock":
         return (
-          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline  outline-8 outline-red-600 z-50 ">
-            
-            <Rock />
-          </div>
+          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center border-12 border-rock  z-50">
+          <Rock />
+        </div>
         );
 
       case "paper":
         return (
-          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline outline-8 outline-indigo-600 z-50 ">
-            
+          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center border-12 border-paper z-50">
             <Paper />
           </div>
         );
       case "scissors":
         return (
-          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline outline-8 outline-yellow-500 z-50 ">
-            
+          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center border-12 border-scissors  z-50">
             <Scissors />
           </div>
+        );
+      case "lizard":
+        return (
+          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center border-12 border-lizard z-50">
+          <Lizard />
+        </div>
+        );
+      case "spock":
+        return (
+          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center border-12 border-cyan z-50">
+          <Spock />
+        </div>
         );
       default:
         return null; // Handle other cases or unexpected values
@@ -52,24 +63,34 @@ const ChallengePage = () => {
     switch (computerChoice) {
       case "rock":
         return (
-          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline  outline-8 outline-red-600 z-50 ">
-        
-            <Rock />
-          </div>
+          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center border-12 border-rock  z-50">
+          <Rock />
+        </div>
         );
+
       case "paper":
         return (
-          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline outline-8 outline-indigo-600 z-50 ">
-            
+          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center border-12 border-paper z-50">
             <Paper />
           </div>
         );
       case "scissors":
         return (
-          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline outline-8 outline-yellow-500 z-50 ">
-            
+          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center border-12 border-scissors  z-50">
             <Scissors />
           </div>
+        );
+      case "lizard":
+        return (
+          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center border-12 border-lizard z-50">
+          <Lizard />
+        </div>
+        );
+      case "spock":
+        return (
+          <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center border-12 border-cyan z-50">
+          <Spock />
+        </div>
         );
 
       default:
