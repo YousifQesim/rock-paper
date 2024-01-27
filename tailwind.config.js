@@ -25,7 +25,7 @@ export default {
         },
       },
       fontFamily: {
-        rockFamily: 'Barlow Semi Condensed',
+        rockFamily: 'sans-serif',
       },
       fontWeight: {
         '600': 600,

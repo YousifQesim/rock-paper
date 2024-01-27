@@ -78,9 +78,9 @@ const ChallengePage = () => {
   };
   return (
     <div className="h-screen ">
-      <div className="flex flex-col  items-center  h-screen w-full">
+      <div className="flex flex-col  items-center  h-screen w-full ">
         <UserScore />
-        <div className="w-2/4 h-1/4 flex justify-center items-center gap-36 ">
+        <div className="md:w-2/4 w-full h-1/4 flex justify-center items-center gap-12 flex-wrap">
           <div className="flex flex-col justify-center items-center">
             <div className="my-8">
               <h1 className="text-white font-rockFamily font-600 text-xl">You picked</h1>
@@ -88,26 +88,26 @@ const ChallengePage = () => {
             <div>{renderPlayerChoiceComponent()}</div>
           </div>
 
-          <div>
+          <div className="order-last lg:order-none " >
 
             {winner ? (
               winner === "player" ? (
                 <div className="flex flex-col justify-center items-center">
-                  <h1 className="text-white font-rockFamily font-700 text-2xl">You win</h1>
+                  <h1 className="text-white font-rockFamily font-700 text-2xl uppercase">You win</h1>
                   <button className="text-green-600 bg-white p-2 rounded-xl w-36 mt-2" onClick={handleReset}>
                     Play Again
                   </button>
                 </div>
               ) : winner === "computer" ? (
                 <div className="flex flex-col justify-center items-center">
-                  <h1 className="text-white font-rockFamily font-700 text-2xl">Computer wins</h1>
+                  <h1 className="text-white font-rockFamily font-700 text-2xl uppercase">Computer wins</h1>
                   <button className="text-red-600 bg-white p-2 rounded-xl w-36 mt-2" onClick={handleReset}>
                     Play Again
                   </button>
                 </div>
               ) : (
                 <div className="flex flex-col justify-center items-center">
-                  <h1 className="text-white font-rockFamily font-700 text-2xl">Draw</h1>
+                  <h1 className="text-white font-rockFamily font-700 text-2xl uppercase">Draw</h1>
                   <button className="text-orange-400 bg-white p-2 rounded-xl w-36 mt-2" onClick={handleReset}>
                     Play Again
                   </button>
@@ -124,6 +124,7 @@ const ChallengePage = () => {
           </div>
         </div>
       </div>
+      <button className="">rule</button>
     </div>
   );
 };
