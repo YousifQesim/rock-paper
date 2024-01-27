@@ -14,11 +14,12 @@ export default {
           rock: ['hsl(349, 71%, 52%)', 'hsl(349, 70%, 56%)'],
           lizard: ['hsl(261, 73%, 60%)', 'hsl(261, 72%, 63%)'],
           cyan: ['hsl(189, 59%, 53%)', 'hsl(189, 58%, 57%)'],
+          score:'#3e52a3'
         },
         neutral: {
-          darkText: 'hsl(229, 25%, 31%)',
-          scoreText: 'hsl(229, 64%, 46%)',
-          headerOutline: 'hsl(217, 16%, 45%)',
+          darkText: '#3b4363',
+          scoreText: '#2a46c0',
+          headerOutline: '#606e85',
         },
         background: {
           radialGradient: ['hsl(214, 47%, 23%)', 'hsl(237, 49%, 15%)'],
