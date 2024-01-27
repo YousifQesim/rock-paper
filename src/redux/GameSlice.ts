@@ -85,8 +85,14 @@ export const determineWinner = createSelector(
     if (playerChoice === computerChoice) return 'draw';
     if (
       (playerChoice === 'rock' && computerChoice === 'scissors') ||
-      (playerChoice === 'paper' && computerChoice === 'rock') ||
-      (playerChoice === 'scissors' && computerChoice === 'paper')
+            (playerChoice === 'paper' && computerChoice === 'rock') ||
+            (playerChoice === 'scissors' && computerChoice === 'paper') ||
+            (playerChoice === 'rock' && computerChoice === 'lizard') || 
+            (playerChoice === 'lizard' && computerChoice === 'spock') || 
+            (playerChoice === 'spock' && computerChoice === 'scissors') || 
+            (playerChoice === 'scissors' && computerChoice === 'lizard') ||
+            (playerChoice === 'lizard' && computerChoice === 'paper') || 
+            (playerChoice === 'paper' && computerChoice === 'spock')
     ) {
       return 'player';
     } else {

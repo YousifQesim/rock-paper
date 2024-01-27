@@ -144,6 +144,7 @@ const ChallengePage = () => {
             <div>{renderComputerChoiceComponent()}</div>
           </div>
         </div>
+        
       </div>
       <button className="">rule</button>
     </div>
