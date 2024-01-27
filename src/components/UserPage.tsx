@@ -21,7 +21,7 @@ function UserPage() {
       ) : (
         <div className="flex flex-col  items-center  h-screen w-full">
           <UserScore />
-          <div className="md:w-2/4 w-full  h-2/5 flex justify-center gap-24 relative border-2 border-red-500">
+          <div className="md:w-2/4 w-full  h-2/5 flex justify-center gap-24 relative ">
             {/* <div className="line1"></div> */}
 
             <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline outline-8 outline-indigo-600 z-50 ">
