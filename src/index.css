@@ -8,30 +8,51 @@
   width: 50%;
   background-color: black;
   top: 25%;
-  left: 30%;
-
+  left: 25%;
   z-index: 0;
 }
+
 .line2 {
   position: absolute;
   height: 2px;
   width: 50%;
   background-color: black;
   top: 55%;
-  left: 35%;
-
-  transform: rotate(-55deg);
-
+  left: 25%;
+  transform: rotate(-45deg);
   z-index: 0;
 }
+
 .line3 {
   position: absolute;
   height: 2px;
   width: 50%;
   background-color: rgb(211, 11, 11);
   top: 55%;
-  left: 15%;
-
-  transform: rotate(55deg);
+  left: 25%;
+  transform: rotate(45deg);
   z-index: 0;
+}
+
+@media (min-width: 640px) {
+  .line1,
+  .line2,
+  .line3 {
+      width: 40%;
+      left: 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  .line1,
+  .line2,
+  .line3 {
+      width: 30%;
+      left: 35%;
+  }
+}
+
+
+body{
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
