@@ -5,12 +5,14 @@ interface GameState {
   score: number;
   playerChoice: string;
   computerChoice: string;
+  resultPage:boolean;
 }
 
 const initialState: GameState = {
   score: 0,
   playerChoice: '',
   computerChoice: '',
+  resultPage: false,
 };
 
 const gameSlice = createSlice({
@@ -26,12 +28,16 @@ const gameSlice = createSlice({
     setComputerChoice: (state, action: PayloadAction<string>) => {
       state.computerChoice = action.payload;
     },
+    setResultPage: (state, action: PayloadAction<boolean>) => {
+      state.resultPage = action.payload;
+    },
     resetGame: (state) => {
       state.playerChoice = '';
       state.computerChoice = '';
+      state.resultPage = false;
     },
   },
 });
 
-export const { setScore, setPlayerChoice, setComputerChoice, resetGame } = gameSlice.actions;
+export const { setScore, setPlayerChoice, setComputerChoice,setResultPage, resetGame } = gameSlice.actions;
 export default gameSlice.reducer;

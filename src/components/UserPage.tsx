@@ -7,7 +7,7 @@ import scissors from "../assets/images/icon-scissors.svg";
 import { UseDispatch,useDispatch,useSelector } from "react-redux";
 import { RootState } from "../redux/Store";
 import UserScore from "./UserScore";
-import { setScore,setComputerChoice,setPlayerChoice,resetGame} from "../redux/GameSlice";
+import { setScore,setComputerChoice,setPlayerChoice,setResultPage,resetGame} from "../redux/GameSlice";
 import { useState } from "react";
 import ChallengePage from "./ChallengePage";
 
@@ -29,8 +29,7 @@ const determineWinner = (playerChoice: string, computerChoice: string): string =
 };
 function UserPage() {
   const dispatch=useDispatch();
-  const { score, playerChoice, computerChoice } = useSelector((state: RootState) => state.game);
-  const [showResultPage,setShowResultPage]=useState(false)
+  const { score, playerChoice, computerChoice,resultPage } = useSelector((state: RootState) => state.game);
   const handleChoice=(choice:string)=>{
     const computerChoice=optoins[Math.floor(Math.random()*3)]
     dispatch(setComputerChoice(computerChoice));
@@ -39,13 +38,14 @@ function UserPage() {
     dispatch(setScore(score + (winner === 'player' ? 1 : winner === 'computer' ? -1 : 0)));
 
     // Show the result page after making a choice
-    setShowResultPage(true);
+  
+    dispatch(setResultPage(true))
     dispatch(setPlayerChoice(choice));
   
   }
   return (
     <div className="h-screen ">
-        {showResultPage ? (
+        { resultPage? (
         <ChallengePage playerChoice={playerChoice} computerChoice={computerChoice} winner={determineWinner(playerChoice, computerChoice)} />
       ) :(
       
