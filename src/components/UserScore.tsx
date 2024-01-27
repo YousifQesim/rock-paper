@@ -1,7 +1,10 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/Store";
 function UserScore() {
+  const {score} = useSelector((state:RootState) => state.game);
+
   return (
   
       
@@ -13,7 +16,7 @@ function UserScore() {
           </div>
           <div className="mr-4">
             <h1>score</h1>
-            <h1>number</h1>
+            <h1>{score}</h1>
           </div>
         </div>
 
