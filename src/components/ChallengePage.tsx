@@ -109,7 +109,7 @@ const ChallengePage = () => {
             <div>{renderPlayerChoiceComponent()}</div>
           </div>
 
-          <div className="order-last lg:order-none md:mx-20 " >
+          <div className="order-last lg:order-none md:mx-12 " >
 
             {winner ? (
               winner === "player" ? (
