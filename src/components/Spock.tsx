@@ -1,24 +1,24 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import paper from "../assets/images/icon-paper.svg";
+import spock from "../assets/images/icon-spock.svg";
 
 import { useDispatch } from "react-redux";
 
 import { handleChoice } from "../redux/GameSlice";
 
-function Paper() {
+function Spock() {
   const dispatch = useDispatch();
 
   const handleChoiceClick = (choice: string) => {
     dispatch(handleChoice(choice));
   };
   return (
-    <div onClick={() => handleChoiceClick("paper")}>
+    <div onClick={() => handleChoiceClick("spock")}>
       <div className="flex items-center">
-        <img src={paper} alt="" className="h-12 w-12" />
+        <img src={spock} alt="" className="h-12 w-12"/>
       </div>
     </div>
   );
 }
 
-export default Paper;
+export default Spock;

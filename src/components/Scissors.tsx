@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 
 import { handleChoice } from "../redux/GameSlice";
 
-function UserPage() {
+function Scissors() {
   const dispatch = useDispatch();
 
   const handleChoiceClick = (choice: string) => {
@@ -15,10 +15,10 @@ function UserPage() {
   return (
     <div onClick={() => handleChoiceClick("scissors")}>
       <div className="flex items-center">
-        <img src={scissors} alt="" className="h-16 w-16" />
+        <img src={scissors} alt="" className="h-12 w-12"/>
       </div>
     </div>
   );
 }
 
-export default UserPage;
+export default Scissors;

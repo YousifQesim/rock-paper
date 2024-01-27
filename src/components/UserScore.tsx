@@ -11,6 +11,8 @@ function UserScore() {
         <h1>Rock</h1>
         <h1>Paper</h1>
         <h1>Scissors</h1>
+        <h1>Lizard</h1>
+        <h1>spock</h1>
       </div>
       <div className="mr-4 bg-white text-black p-2 w-24 rounded-xl text-center">
         <h1>score</h1>

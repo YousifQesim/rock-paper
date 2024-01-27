@@ -2,28 +2,35 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    
     extend: {
+      borderWidth: {
+      
+        '12': '12px',
+        '16': '16px',
+        '14': '14px',
+      },
       screens: {
         'sm': '375px', // Mobile
         'lg': '1366px', // Desktop
       },
       colors: {
-        primary: {
-          scissors: ['hsl(39, 89%, 49%)', 'hsl(40, 84%, 53%)'],
-          paper: ['hsl(230, 89%, 62%)', 'hsl(230, 89%, 65%)'],
-          rock: ['hsl(349, 71%, 52%)', 'hsl(349, 70%, 56%)'],
-          lizard: ['hsl(261, 73%, 60%)', 'hsl(261, 72%, 63%)'],
-          cyan: ['hsl(189, 59%, 53%)', 'hsl(189, 58%, 57%)'],
+      
+          scissors: '#ECA922',
+          paper:'#4865F4',
+          rock: '#DD405D',
+          lizard: '#8C5DE5',
+          cyan: '#52BED1',
           score:'#3e52a3'
-        },
-        neutral: {
-          darkText: '#3b4363',
-          scoreText: '#2a46c0',
-          headerOutline: '#606e85',
-        },
-        background: {
-          radialGradient: ['hsl(214, 47%, 23%)', 'hsl(237, 49%, 15%)'],
-        },
+        
+        // neutral: {
+        //   darkText: '#3b4363',
+        //   scoreText: '#2a46c0',
+        //   headerOutline: '#606e85',
+        // },
+        // background: {
+        //   radialGradient: ['hsl(214, 47%, 23%)', 'hsl(237, 49%, 15%)'],
+        // },
       },
       fontFamily: {
         rockFamily: 'sans-serif',

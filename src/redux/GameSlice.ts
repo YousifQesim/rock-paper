@@ -38,8 +38,8 @@ const gameSlice = createSlice({
       state.resultPage = false;
     },
     handleChoice: (state, action: PayloadAction<string>) => {
-      const options = ['rock', 'paper', 'scissors'];
-      const computerChoice = options[Math.floor(Math.random() * 3)];
+      const options = ['rock', 'paper', 'scissors','lizard','spock'];
+      const computerChoice = options[Math.floor(Math.random() * 5)];
 
       state.computerChoice = computerChoice;
       state.playerChoice = action.payload;
@@ -47,9 +47,16 @@ const gameSlice = createSlice({
       const winner =
         state.playerChoice === state.computerChoice
           ? 'draw'
-          : (state.playerChoice === 'rock' && state.computerChoice === 'scissors') ||
+          : 
+            (state.playerChoice === 'rock' && state.computerChoice === 'scissors') ||
             (state.playerChoice === 'paper' && state.computerChoice === 'rock') ||
-            (state.playerChoice === 'scissors' && state.computerChoice === 'paper')
+            (state.playerChoice === 'scissors' && state.computerChoice === 'paper') ||
+            (state.playerChoice === 'rock' && state.computerChoice === 'lizard') || 
+            (state.playerChoice === 'lizard' && state.computerChoice === 'spock') || 
+            (state.playerChoice === 'spock' && state.computerChoice === 'scissors') || 
+            (state.playerChoice === 'scissors' && state.computerChoice === 'lizard') ||
+            (state.playerChoice === 'lizard' && state.computerChoice === 'paper') || 
+            (state.playerChoice === 'paper' && state.computerChoice === 'spock')
           ? 'player'
           : 'computer';
 

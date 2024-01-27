@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 
 import { handleChoice } from "../redux/GameSlice";
 
-function UserPage() {
+function Rock() {
   const dispatch = useDispatch();
 
   const handleChoiceClick = (choice: string) => {
@@ -15,10 +15,10 @@ function UserPage() {
   return (
     <div onClick={() => handleChoiceClick("rock")}>
       <div className="flex items-center ">
-        <img src={rock} alt="" className="h-16 w-16" />
+        <img src={rock} alt="" className="h-12 w-12" />
       </div>
     </div>
   );
 }
 
-export default UserPage;
+export default Rock;

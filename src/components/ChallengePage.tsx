@@ -25,23 +25,23 @@ const ChallengePage = () => {
       case "rock":
         return (
           <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline  outline-8 outline-red-600 z-50 ">
-            {" "}
-            <Rock />{" "}
+            
+            <Rock />
           </div>
         );
 
       case "paper":
         return (
           <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline outline-8 outline-indigo-600 z-50 ">
-            {" "}
-            <Paper />{" "}
+            
+            <Paper />
           </div>
         );
       case "scissors":
         return (
           <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline outline-8 outline-yellow-500 z-50 ">
-            {" "}
-            <Scissors />{" "}
+            
+            <Scissors />
           </div>
         );
       default:
@@ -53,22 +53,22 @@ const ChallengePage = () => {
       case "rock":
         return (
           <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline  outline-8 outline-red-600 z-50 ">
-            {" "}
-            <Rock />{" "}
+        
+            <Rock />
           </div>
         );
       case "paper":
         return (
           <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline outline-8 outline-indigo-600 z-50 ">
-            {" "}
-            <Paper />{" "}
+            
+            <Paper />
           </div>
         );
       case "scissors":
         return (
           <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline outline-8 outline-yellow-500 z-50 ">
-            {" "}
-            <Scissors />{" "}
+            
+            <Scissors />
           </div>
         );
 
