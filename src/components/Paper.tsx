@@ -32,11 +32,10 @@ function UserPage() {
   };
   return (
     <div
-              className="bg-white cursor-pointer rounded-full h-20 w-20 flex justify-center items-center outline outline-8 outline-indigo-600 z-50 "
               onClick={() => handleChoiceClick("paper")}
             >
               <div className="flex items-center">
-                <img src={paper} alt="" />
+                <img src={paper} alt="" className="h-16 w-16" />
               </div>
             </div>
   );

@@ -32,11 +32,10 @@ function UserPage() {
   };
   return (
     <div
-              className="bg-white cursor-pointer rounded-full h-20 w-20 flex justify-center items-center outline outline-8 outline-yellow-500 z-50"
               onClick={() => handleChoiceClick("scissors")}
             >
               <div className="flex items-center">
-                <img src={scissors} alt="" />
+                <img src={scissors} alt=""  className="h-16 w-16" />
               </div>
             </div>
   );

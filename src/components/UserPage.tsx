@@ -37,26 +37,30 @@ function UserPage() {
 
   return (
     <div className="h-screen ">
-      {/* {resultPage ? (
+      {resultPage ? (
         <ChallengePage />
-      ) : ( */}
-      <div className="flex flex-col  items-center  h-screen w-full">
-        <UserScore />
-        <div className="w-2/4 h-1/4 flex justify-center gap-24 relative">
-          {/* <div className="line1"></div> */}
+      ) : (
+        <div className="flex flex-col  items-center  h-screen w-full">
+          <UserScore />
+          <div className="w-2/4 h-1/4 flex justify-center gap-24 relative">
+            {/* <div className="line1"></div> */}
 
-          <div>
-            <Paper />
+            <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline outline-8 outline-indigo-600 z-50 ">
+              <Paper />
+            </div>
+            {/* <div className="line2"></div> */}
+            <div className="bg-white cursor-pointer rounded-full h-28 w-28 flex justify-center items-center outline outline-8 outline-yellow-500 z-50">
+
+              <Scissors />
+            </div>
+            {/* <div className="line3"></div> */}
+
+            <div className="bg-white cursor-pointer absolute -bottom-5 rounded-full h-28 w-28 flex justify-center items-center outline outline-8 outline-red-600 z-50">
+            <Rock />
+            </div>
           </div>
-          {/* <div className="line2"></div> */}
-          <div>
-            <Scissors />
-          </div>
-          {/* <div className="line3"></div> */}
-          <Rock />
         </div>
-      </div>
-      ){/* } */}
+      )}
       <h1>{playerChoice}</h1>
       <h1>{computerChoice}</h1>
       <h1>{score}</h1>

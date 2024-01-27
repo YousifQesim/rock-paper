@@ -32,11 +32,10 @@ function UserPage() {
   };
   return (
     <div
-    className="bg-white cursor-pointer absolute -bottom-5 rounded-full h-20 w-20 flex justify-center items-center outline outline-8 outline-red-600 z-50"
     onClick={() => handleChoiceClick("rock")}
   >
     <div className="flex items-center ">
-      <img src={rock} alt="" />
+      <img src={rock} alt=""  className="h-16 w-16"/>
     </div>
   </div>
   );
