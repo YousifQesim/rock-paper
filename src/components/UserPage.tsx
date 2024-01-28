@@ -37,7 +37,7 @@ function UserPage() {
       {resultPage ? (
         <ChallengePage  />
       ) : (
-        <div className="flex flex-col items-center h-screen w-full">
+        <div className="flex flex-col items-center w-full">
         <UserScore />
         <div className="md:w-2/4 w-full h-3/5 flex flex-col justify-center items-center gap-4 ">
           <div className=" relative top-4">
