@@ -7,12 +7,15 @@ const loadScoreFromLocalStorage = () => {
   const storedScore = localStorage.getItem("score");
   return storedScore ? parseInt(storedScore, 10) : 0;
 };
+export const selectDifficulty = (state: RootState) => state.game.difficulty;
+
 
 interface GameState {
   score: number;
   playerChoice: string;
   computerChoice: string;
   resultPage: boolean;
+  difficulty:string
 }
 
 const initialState: GameState = {
@@ -20,6 +23,7 @@ const initialState: GameState = {
   playerChoice: "",
   computerChoice: "",
   resultPage: false,
+  difficulty:"medium"
 };
 
 const gameSlice = createSlice({
@@ -39,15 +43,25 @@ const gameSlice = createSlice({
     setResultPage: (state, action: PayloadAction<boolean>) => {
       state.resultPage = action.payload;
     },
+    setDifficulty: (state, action: PayloadAction<'easy' | 'medium' | 'hard'>) => {
+      state.difficulty = action.payload;
+    },
     resetGame: (state) => {
       state.playerChoice = "";
       state.computerChoice = "";
       state.resultPage = false;
       
     },
+    
     handleChoice: (state, action: PayloadAction<string>) => {
       const options = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
-      const computerChoice = options[Math.floor(Math.random() * 5)];
+      const computerChoice =
+      state.difficulty === 'easy'
+        ? options[Math.floor(Math.random() * 3)] // Computer avoids 'lizard' and 'spock'
+        : state.difficulty === 'medium'
+        ? options[Math.floor(Math.random() * 4)] // Computer chooses randomly from all options
+        : options[Math.floor(Math.random() * 5)]; // Computer chooses randomly from all options
+
 
       state.computerChoice = computerChoice;
       state.playerChoice = action.payload;
@@ -85,6 +99,7 @@ export const {
   setResultPage,
   resetGame,
   handleChoice,
+  setDifficulty
 } = gameSlice.actions;
 
 export const selectPlayerChoice = (state: RootState) => state.game.playerChoice;

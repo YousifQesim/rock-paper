@@ -16,6 +16,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../redux/Store";
 import UserScore from "./UserScore";
 import { useState } from "react";
+import DifficultySelector from "./DifficultySelector";
 
 
 import ChallengePage from "./ChallengePage";
@@ -70,6 +71,9 @@ function UserPage() {
       <div className={`flex flex-col items-center justify-center ${isPopupVisible ? 'overflow-hidden' : ''}`}>
       <PopupButton onClick={togglePopup} />
       {isPopupVisible && <Popup onClose={togglePopup} />}
+    </div>
+    <div>
+    <DifficultySelector/>
     </div>
     </div>
   );
