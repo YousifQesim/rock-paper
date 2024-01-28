@@ -13,6 +13,7 @@ import { determineWinner, resetGame, setResultPage } from "../redux/GameSlice";
 import PopupButton from "./PopupButton";
 import Popup from "./Popup";
 import { useEffect, useState } from "react";
+import Spinner from "./Spinner";
 
 const ChallengePage = () => {
   const { playerChoice, computerChoice } = useSelector(
@@ -129,6 +130,13 @@ const ChallengePage = () => {
             <div>{renderPlayerChoiceComponent()}</div>
           </div>
 
+          {isLoading ? (
+            <div className="order-last lg:order-none md:mx-12 lg:relative lg:left-6">
+          
+        <Spinner/>
+            </div>
+          ) : (
+
           <div className="order-last lg:order-none md:mx-12 ">
             {winner ? (
               winner === "player" ? (
@@ -170,6 +178,7 @@ const ChallengePage = () => {
               )
             ) : null}
           </div>
+          )}
           {isLoading ? (
             <div className="flex flex-col justify-center items-center">
           
