@@ -17,7 +17,7 @@ const DifficultySelector = () => {
       
       <select
     
-         className=" font-rockFamily font-700  px-4 py-3 w-36 rounded focus:outline-none border border-score absolute bottom-4 left-4"
+         className=" font-rockFamily font-700  px-4 py-3 w-36 rounded bg-transparent text-white focus:outline-none border-2 border-white absolute bottom-4 left-4"
         value={difficulty}
         onChange={(event) => handleDifficultyChange(event)}
       >
