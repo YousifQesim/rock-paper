@@ -117,7 +117,7 @@ const ChallengePage = () => {
   }, [computerChoice]);
   return (
     <div className="h-screen ">
-      <div className="flex flex-col  items-center  h-screen w-full ">
+      <div className="flex flex-col  items-center w-full ">
         <UserScore />
         <div className="md:w-2/4 w-full h-1/4 flex justify-center items-center gap-12 flex-wrap">
           <div className="flex flex-col justify-center items-center">
