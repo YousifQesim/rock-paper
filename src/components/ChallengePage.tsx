@@ -10,6 +10,9 @@ import Scissors from "./Scissors";
 import Lizard from "./Lizard";
 import Spock from "./Spock";
 import { determineWinner, resetGame, setResultPage } from "../redux/GameSlice";
+import PopupButton from "./PopupButton";
+import Popup from "./Popup";
+import { useState } from "react";
 
 const ChallengePage = () => {
   const { playerChoice, computerChoice } = useSelector(
@@ -18,9 +21,14 @@ const ChallengePage = () => {
   const winner = useSelector(determineWinner);
   const dispatch = useDispatch();
 
+  const [isPopupVisible, setPopupVisible] = useState(false);
+
   const handleReset = () => {
     dispatch(resetGame());
     dispatch(setResultPage(false));
+  };
+  const togglePopup = () => {
+    setPopupVisible(!isPopupVisible);
   };
   const renderPlayerChoiceComponent = () => {
     switch (playerChoice) {
@@ -146,7 +154,10 @@ const ChallengePage = () => {
         </div>
         
       </div>
-      <button className="">rule</button>
+      <div className={`flex flex-col items-center justify-center ${isPopupVisible ? 'overflow-hidden' : ''}`}>
+      <PopupButton onClick={togglePopup} />
+      {isPopupVisible && <Popup onClose={togglePopup} />}
+    </div>
     </div>
   );
 };

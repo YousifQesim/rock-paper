@@ -14,6 +14,9 @@ export default {
         'sm': '375px', // Mobile
         'lg': '1366px', // Desktop
       },
+      borderColor: {
+        grayScaleRainbow: 'linear-gradient(90deg, #000, #f00, #ff0, #0f0, #00f, #f0f, #000)',
+      },
       colors: {
       
           scissors: '#ECA922',
