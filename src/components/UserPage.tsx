@@ -66,15 +66,17 @@ function UserPage() {
           </div>
           </div>
         </div>
+        
       </div>
       )}
-      <div className={`flex flex-col items-center justify-center ${isPopupVisible ? 'overflow-hidden' : ''}`}>
+      <div>
+    <DifficultySelector/>
+    </div>
+      <div className={`flex flex-col items-center justify-center z-50 ${isPopupVisible ? 'overflow-hidden' : ''}`}>
       <PopupButton onClick={togglePopup} />
       {isPopupVisible && <Popup onClose={togglePopup} />}
     </div>
-    <div>
-    <DifficultySelector/>
-    </div>
+    
     </div>
   );
 }

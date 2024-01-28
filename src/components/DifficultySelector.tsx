@@ -13,11 +13,11 @@ const DifficultySelector = () => {
   };
 
   return (
-    <div className="flex flex-col items-center ">
+    <div className="flex flex-col items-center z-0">
       
       <select
     
-         className=" font-rockFamily font-700  px-4 py-2 w-36 rounded bg-transparent text-white focus:outline-none border-2 border-white absolute bottom-4 left-4"
+         className=" font-rockFamily font-700  px-4 py-2 w-36 rounded bg-transparent text-white focus:outline-none border-2 border-white absolute bottom-4 left-4 "
         value={difficulty}
         onChange={(event) => handleDifficultyChange(event)}
       >
