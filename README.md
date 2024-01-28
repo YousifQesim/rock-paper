@@ -7,9 +7,6 @@ Welcome to the Rock, Paper, Scissors game repository! This project is a web-base
 - [Introduction](#introduction)
 - [Features](#features)
 - [Rules](#rules)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
 - [Usage](#usage)
 
 
@@ -27,9 +24,6 @@ This project is a front-end coding challenge that aims to build a Rock, Paper, S
 ## Rules
 
 If the player wins, they gain 1 point. If the computer wins, the player loses one point.
-
-
-#### Bonus
 
 - Scissors beats Paper
 - Paper beats Rock
