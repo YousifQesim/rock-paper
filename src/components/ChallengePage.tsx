@@ -16,7 +16,7 @@ import { useEffect, useState } from "react";
 import Spinner from "./Spinner";
 
 const ChallengePage = () => {
-  const { playerChoice, computerChoice } = useSelector(
+  const { playerChoice, computerChoice,score } = useSelector(
     (state: RootState) => state.game
   );
   const winner = useSelector(determineWinner);
@@ -119,7 +119,30 @@ const ChallengePage = () => {
   return (
     <div className="h-screen ">
       <div className="flex flex-col  items-center w-full ">
-        <UserScore />
+    
+    
+      <div className="border-white border-solid border-2 rounded-lg text-white md:w-1/4 w-3/4 h-24 flex justify-between items-center mx-auto my-20">
+      <div className="ml-4 font-rockFamily space-y-0 leading-4 uppercase font-700 ">
+        <h1>Rock</h1>
+        <h1>Paper</h1>
+        <h1>Scissors</h1>
+        <h1>Lizard</h1>
+        <h1>spock</h1>
+      </div>
+      <div className="mr-4 bg-white text-black p-2 w-24 rounded-xl text-center">
+        <h1 className=" font-rockFamily font-700">score</h1>
+        {isLoading ? (
+            <div className="">
+          
+                <h1 className="animate-pulse font-rockFamily font-700 text-4xl text-gray-600">...</h1>
+            </div>
+          ) : (
+        <h1 className="font-rockFamily font-700 text-4xl text-gray-600 ">{score}</h1>)}
+      </div>
+    </div>
+
+
+
         <div className="md:w-2/4 w-full h-1/4 flex justify-center items-center gap-12 flex-wrap">
           <div className="flex flex-col justify-center items-center">
             <div className="my-8">
