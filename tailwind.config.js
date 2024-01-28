@@ -26,6 +26,7 @@ export default {
           cyan: '#52BED1',
           score:'#3e52a3',
           scoreText: '#2a46c0',
+          bgg:'#1F3756'
         // neutral: {
         //   darkText: '#3b4363',
         //   

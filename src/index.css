@@ -53,10 +53,13 @@
 }
 
 
+
 body{
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
-
+.back{
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
 .clip-pentagon-container {
   position: relative;
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);

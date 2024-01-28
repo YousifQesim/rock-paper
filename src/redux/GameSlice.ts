@@ -43,8 +43,7 @@ const gameSlice = createSlice({
       state.playerChoice = "";
       state.computerChoice = "";
       state.resultPage = false;
-      localStorage.removeItem("score");
-      state.score = 0;
+      
     },
     handleChoice: (state, action: PayloadAction<string>) => {
       const options = ['rock', 'paper', 'scissors', 'lizard', 'spock'];

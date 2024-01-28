@@ -17,6 +17,7 @@ import { RootState } from "../redux/Store";
 import UserScore from "./UserScore";
 import { useState } from "react";
 
+
 import ChallengePage from "./ChallengePage";
 function UserPage() {
   const { resultPage } = useSelector((state: RootState) => state.game);
@@ -30,10 +31,11 @@ function UserPage() {
   const togglePopup = () => {
     setPopupVisible(!isPopupVisible);
   };
+  
   return (
     <div className="h-screen ">
       {resultPage ? (
-        <ChallengePage />
+        <ChallengePage  />
       ) : (
         <div className="flex flex-col items-center h-screen w-full">
         <UserScore />
