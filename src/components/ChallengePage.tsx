@@ -1,7 +1,6 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 
-import UserScore from "./UserScore";
 import { RootState } from "@/redux/Store";
 import { useSelector, useDispatch } from "react-redux";
 import Paper from "./Paper";
