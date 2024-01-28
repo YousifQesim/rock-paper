@@ -21,11 +21,11 @@ export default {
           rock: '#DD405D',
           lizard: '#8C5DE5',
           cyan: '#52BED1',
-          score:'#3e52a3'
-        
+          score:'#3e52a3',
+          scoreText: '#2a46c0',
         // neutral: {
         //   darkText: '#3b4363',
-        //   scoreText: '#2a46c0',
+        //   
         //   headerOutline: '#606e85',
         // },
         // background: {

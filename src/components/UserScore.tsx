@@ -15,8 +15,8 @@ function UserScore() {
         <h1>spock</h1>
       </div>
       <div className="mr-4 bg-white text-black p-2 w-24 rounded-xl text-center">
-        <h1>score</h1>
-        <h1 className="font-rockFamily font-700 text-4xl ">{score}</h1>
+        <h1 className=" font-rockFamily font-700">score</h1>
+        <h1 className="font-rockFamily font-700 text-4xl text-gray-600 ">{score}</h1>
       </div>
     </div>
   );

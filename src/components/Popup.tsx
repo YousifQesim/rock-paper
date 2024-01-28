@@ -31,19 +31,19 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
         </button>
 
         {/* Add your bonus rules content here */}
-        <h2 className="text-2xl font-semibold mb-4">Bonus Rules</h2>
+        <h2 className="text-2xl font-rockFamily font-700 mb-4 text-score uppercase">Bonus Rules</h2>
         <ul className="list-disc pl-4">
   
-      <li><strong>Scissors beats Paper:</strong> Scissors cut Paper.</li>
-    <li><strong>Paper beats Rock:</strong> Paper covers Rock.</li>
-    <li><strong>Rock beats Lizard:</strong> Rock crushes Lizard.</li>
-    <li><strong>Lizard beats Spock:</strong> Lizard poisons Spock.</li>
-    <li><strong>Spock beats Scissors:</strong> Spock smashes Scissors.</li>
-    <li><strong>Scissors beats Lizard:</strong> Scissors decapitate Lizard.</li>
-    <li><strong>Paper beats Spock:</strong> Paper disproves Spock.</li>
-    <li><strong>Rock beats Scissors:</strong> Rock crushes Scissors.</li>
-    <li><strong>Lizard beats Paper:</strong> Lizard eats Paper.</li>
-    <li><strong>Spock beats Rock:</strong> Spock vaporizes Rock.</li>
+        <li className="marker:text-scoreText"><strong className="text-scoreText">Scissors beats Paper:</strong> Scissors cut Paper.</li>
+    <li className="marker:text-scoreText"><strong className="text-scoreText">Paper beats Rock:</strong> Paper covers Rock.</li>
+      <li className="marker:text-scoreText"><strong className="text-scoreText">Rock beats Lizard:</strong> Rock crushes Lizard.</li>
+      <li className="marker:text-scoreText"><strong className="text-scoreText">Lizard beats Spock:</strong> Lizard poisons Spock.</li>
+      <li className="marker:text-scoreText"><strong className="text-scoreText">Spock beats Scissors:</strong> Spock smashes Scissors.</li>
+      <li className="marker:text-scoreText"><strong className="text-scoreText">Scissors beats Lizard:</strong> Scissors decapitate Lizard.</li>
+      <li className="marker:text-scoreText"><strong className="text-scoreText">Paper beats Spock:</strong> Paper disproves Spock.</li>
+      <li className="marker:text-scoreText"><strong className="text-scoreText">Rock beats Scissors:</strong> Rock crushes Scissors.</li>
+      <li className="marker:text-scoreText"><strong className="text-scoreText">Lizard beats Paper:</strong> Lizard eats Paper.</li>
+      <li className="marker:text-scoreText"><strong className="text-scoreText">Spock beats Rock:</strong> Spock vaporizes Rock.</li>
       </ul>
       
       </div>
